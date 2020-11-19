@@ -1,0 +1,47 @@
+/*
+CREATE TABLE app_rankings.app_detail (
+APP_ID VARCHAR(10),
+Title VARCHAR(50),
+Category VARCHAR(50),
+Price VARCHAR(10),
+System_base VARCHAR(50),
+Total_Rating VARCHAR(10),
+Growth_30_days VARCHAR(10),
+Growth_60_days VARCHAR(10),
+Average_Rating VARCHAR(10),
+Install_achieved VARCHAR(10),
+Install_estimated VARCHAR(10),
+5_Star_Ratings VARCHAR(10),
+4_Star_Ratings VARCHAR(10),
+3_Star_Ratings VARCHAR(10),
+2_Star_Ratings VARCHAR(10),
+1_Star_Ratings VARCHAR(10),
+Country_Rankings VARCHAR(5000),
+Total_num_ratings VARCHAR(1000),
+Total_num_installs_estimated_data VARCHAR(1000),
+Average_rating_data VARCHAR(1000),
+Market_lead_percentage_data VARCHAR(1000),
+Rating_distribution_data VARCHAR(1000),
+Current_rating_distribution_data VARCHAR(1000),
+Price_history_stats_data VARCHAR(1000),
+PRIMARY KEY(APP_ID));
+*/
+
+CREATE TABLE app_rank (
+APP_ID VARCHAR(10),
+Rank_ VARCHAR(5),
+Title VARCHAR(50),
+Category VARCHAR(50),
+Total_Rating VARCHAR(10),
+Install_ VARCHAR(10),
+Average_Rating VARCHAR(10),
+Growth_30_days VARCHAR(10),
+Growth_60_days VARCHAR(10),
+Price VARCHAR(10),
+URL VARCHAR(500),
+PRIMARY KEY(APP_ID));
+
+load data infile '/Users/caoyanan/Desktop/canada/apps/rank.csv'
+into table app_rank
+fields terminated by '' optionally enclosed by '"' escaped by '"'
+lines terminated by '\r\n';
